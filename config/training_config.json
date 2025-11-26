@@ -1,0 +1,122 @@
+{
+  "model_name": "Prophet",
+  "model_params": {
+    "seasonality_mode": "multiplicative",
+    "daily_seasonality": true,
+    "weekly_seasonality": true,
+    "yearly_seasonality": false,
+    "changepoint_prior_scale": 0.05,
+    "seasonality_prior_scale": 10.0,
+    "n_jobs": 2
+  },
+  "train_params": {
+    "prediction_length": 1008,
+    "context_length": 2016,
+    "train_ratio": 0.9
+  },
+  "timestamp": "2025-11-26T19:01:00.954538",
+  "dataset_path": "dataset\\milano_traffic_nid.csv",
+  "history": {
+    "model_params_by_model": {
+      "LSTM": {
+        "hidden_size": 128,
+        "num_layers": 1,
+        "dropout": 0.0,
+        "batch_size": 64,
+        "epochs": 10,
+        "learning_rate": 0.01
+      },
+      "N-HiTS": {
+        "n_blocks": 3,
+        "n_layers": 2,
+        "hidden_size": 512,
+        "batch_size": 64,
+        "epochs": 10,
+        "learning_rate": 0.001
+      },
+      "TBATS": {
+        "use_box_cox": true,
+        "use_trend": true,
+        "use_damped_trend": true,
+        "use_arma_errors": true,
+        "seasonal_periods": "144,1008"
+      },
+      "Prophet": {
+        "seasonality_mode": "multiplicative",
+        "daily_seasonality": true,
+        "weekly_seasonality": true,
+        "yearly_seasonality": false,
+        "changepoint_prior_scale": 0.05,
+        "seasonality_prior_scale": 10.0,
+        "n_jobs": 2
+      },
+      "LightGBM": {
+        "n_estimators": 200,
+        "learning_rate": 0.1,
+        "max_depth": 15,
+        "num_leaves": 31,
+        "min_child_samples": 20,
+        "subsample": 0.8
+      },
+      "Chronos": {
+        "model_size": "base",
+        "num_samples": 20,
+        "temperature": 1.0,
+        "use_median": true
+      },
+      "RandomForest": {
+        "n_estimators": 500,
+        "max_depth": 3,
+        "min_samples_split": 3,
+        "min_samples_leaf": 4,
+        "max_features": "sqrt",
+        "n_jobs": 2
+      }
+    },
+    "train_params_by_model": {
+      "LSTM": {
+        "prediction_length": 286,
+        "context_length": 1008,
+        "train_ratio": 0.95
+      },
+      "N-HiTS": {
+        "prediction_length": 1006,
+        "context_length": 1500,
+        "train_ratio": 0.8
+      },
+      "TBATS": {
+        "prediction_length": 1008,
+        "context_length": 2016,
+        "train_ratio": 0.9
+      },
+      "Prophet": {
+        "prediction_length": 1008,
+        "context_length": 2016,
+        "train_ratio": 0.9
+      },
+      "LightGBM": {
+        "prediction_length": 504,
+        "context_length": 2016,
+        "train_ratio": 0.95
+      },
+      "Chronos": {
+        "prediction_length": 1008,
+        "context_length": 2016,
+        "train_ratio": 0.9
+      },
+      "RandomForest": {
+        "prediction_length": 1008,
+        "context_length": 2016,
+        "train_ratio": 0.9
+      }
+    },
+    "dataset_path_by_model": {
+      "LightGBM": "dataset\\trentino_traffic_nid.csv",
+      "Chronos": "dataset\\trentino_traffic_nid.csv",
+      "N-HiTS": "dataset\\trentino_traffic_nid.csv",
+      "LSTM": "dataset\\trentino_traffic_nid.csv",
+      "RandomForest": "dataset\\trentino_traffic_nid.csv",
+      "Prophet": "dataset\\milano_traffic_nid.csv"
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python predict/model_lstm.py:*)",
+      "Bash(conda info:*)",
+      "Bash(conda activate:*)",
+      "Bash(conda list:*)",
+      "Bash(findstr:*)",
+      "Bash(python:*)",
+      "Bash(pip install:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -1,0 +1,35 @@
+# Core dependencies
+numpy>=1.21,<2
+pandas>=2.0,<3
+
+# Machine Learning
+scikit-learn>=1.6.0,<2
+scipy>=1.8.0
+
+# Deep Learning - PyTorch CPU
+--index-url https://download.pytorch.org/whl/cpu
+torch>=2.0,<3
+torchvision>=0.15,<1
+
+# Time Series Models
+lightgbm>=4.0
+tbats>=1.1.0
+pmdarima>=2.0  # For ARIMA models
+
+# Chronos (Time Series Foundation Model)
+git+https://github.com/amazon-science/chronos-forecasting.git
+
+# Visualization
+matplotlib>=3.5
+seaborn>=0.12
+
+# Web Interface
+streamlit>=1.28
+
+# Utilities
+tqdm>=4.27
+pyyaml>=6.0
+
+# Development
+jupyter
+ipykernel
